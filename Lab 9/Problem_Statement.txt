@@ -1,0 +1,56 @@
+Problem 1
+
+You want to buy an item that costs ₹X from a shop. You have a list of denominations, L, and you're quite wealthy, with an unlimited supply of each note in that list. However, the shopkeeper won't accept any payment less than ₹X. What’s the smallest amount of money you can pay to the shopkeeper to complete your purchase?
+
+You have to implement a function `minimum_amount(L, X)` that returns the minimum possible amount as discussed above.
+
+For example:
+- minimum_amount([10], 7) should return 10, since 10 is the minimum amount >= 7 that can be formed by using notes of denomination 10.
+- minimum_amount([5, 7], 16) should return 17, since 17 is the minimum amount >= 16 that can be formed by using notes of denomination 5 and 7. This can be achieved by paying two notes of denomination 5, and one note of denomination 7, totalling 5 + 5 + 7 = 17.
+- minimum_amount([2, 5], 8) should return 8, since you can use 4 notes of denomination 2.
+ 
+Sample Input
+2
+10
+7
+5 7
+16
+ 
+Sample Output:
+10
+17
+ 
+Problem 2
+ 
+In this task, you will need to code and run your code locally on the lab machine, instead of moodle.
+ 
+Download Data.zip from https://moodlenew.iitd.ac.in/pluginfile.php/60267/mod_vpl/intro/Data.zip and follow these steps:
+
+1. Extract the contents of Data.zip.
+    - Right Click the zip folder and select the Extract option.
+    - Once extracted, you will have a directory, named Data in your extracted location.
+
+2. Check the structure:
+    - Ensure there are exactly 10 directories named D1, D2, ..., D10.
+
+3. Understand the directory structure:
+    - Each directory may contain additional subdirectories and text files.
+    - Text files have names ending in .txt and contain integers, each on a new line.
+    - Definition: A file is considered to be "within" a directory if it is directly inside that directory or located within any of its subdirectories (including deeper levels, such as sub-sub-directories,...).
+
+For each directory Di (where i ranges from 1 to 10), your task is to calculate the sum of all integers found in the .txt files located within that directory.
+ 
+4. Write a program on your local machine, which, given a directory path, recursively scans all the files within the directory, and returns the sum of all the numbers in those files. You may assume that each of those files contains one or more numbers, and one number per line.
+
+5. Run your program for each directory Di (i ranging from 1 to 10), and obtain10 integers, where the i-th integer corresponds to the sum of all integers from the files within directory Di.
+ 
+6. Copy these 10 integers to p2_output.txt on moodle, one integer per line. Again, the i-th of these integers is expected to contain the sum of all the integers in all the files contained within Di.
+ 
+7. Copy your code to p2.py.
+
+8. Run "Evaluate" as usual.
+
+
+We are providing two python functions which might be helpful for you to solve problem-2. You may copy the following programs and modify them appropriately to construct your code: Lab 9 - Data Folder.
+- recursive_ls.py reads a path of a directory and prints all directories and files within the given directory.
+- grep_sim.py reads a path of a file and a string s, and prints all lines in the given file which contain the string s.
